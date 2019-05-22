@@ -37,40 +37,40 @@ app.Animation = (function () {
 	// --------------------------------------------------------------------------------------
 	function step1() {
 		t.to("#caption-1", 0, {opacity:1, delay:0.5, ease:Cubic.easeInOut});
-		t.delayedCall(1.3, step2);
+		t.delayedCall(2, step2);
 	}
 
 	// --------------------------------------------------------------------------------------
 	function step2() {
 		t.to("#caption-1", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#caption-2", 0, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
-		t.delayedCall(1.3, step3);
+		t.delayedCall(2, step3);
 	}
 
 	// --------------------------------------------------------------------------------------
 	function step3() {
 		t.to("#caption-2", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#caption-3", 0, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
-		t.delayedCall(1.8, step4);
+		t.delayedCall(2, step6);
 	}
 
 	// --------------------------------------------------------------------------------------
-	function step4() {
-		t.to("#caption-3", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
-		t.to("#caption-4", 0, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
-		t.delayedCall(1.3, step5);
-	}
-
-	// --------------------------------------------------------------------------------------
-	function step5() {
-		t.to("#caption-4", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
-		t.to("#caption-5", 1, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
-		t.delayedCall(1.7, step6);
-	}
+	// function step4() {
+	// 	t.to("#caption-3", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
+	// 	t.to("#caption-4", 0, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
+	// 	t.delayedCall(1.3, step5);
+	// }
+    //
+	// // --------------------------------------------------------------------------------------
+	// function step5() {
+	// 	t.to("#caption-4", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
+	// 	t.to("#caption-5", 1, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
+	// 	t.delayedCall(1.7, step6);
+	// }
 
 	// --------------------------------------------------------------------------------------
 	function step6() {
-		t.to("#caption-5", 1, {y:0, delay:0.0, ease:Cubic.easeInOut});
+		// t.to("#caption-3", 1, {y:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#logo", 1, {scale:1, x:0, y:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#legal-button", 1, {opacity:1, delay:1.0, ease:Cubic.easeInOut});
 		t.set("#legal-button", {display:"block"});

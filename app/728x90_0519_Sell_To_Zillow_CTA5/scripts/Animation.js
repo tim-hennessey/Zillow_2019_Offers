@@ -65,7 +65,7 @@ app.Animation = (function () {
 	function step5() {
 		t.to("#caption-4", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#caption-5", 1, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
-		t.delayedCall(1.7, step6);
+		t.delayedCall(.5, step6);
 	}
 
 	// --------------------------------------------------------------------------------------

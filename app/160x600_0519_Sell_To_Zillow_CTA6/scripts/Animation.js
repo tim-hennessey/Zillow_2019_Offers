@@ -19,6 +19,7 @@ app.Animation = (function () {
 		t.set("#caption-3", {opacity:0});
 		t.set("#caption-4", {opacity:0});
 		t.set("#caption-5", {opacity:0});
+        t.set("#caption-6", {opacity:0});
 		// t.set("#logo", {scale:0.75, x:-50, y:-50});
 
 		banner.addEventListener('mouseover', handleOver, true);
@@ -51,27 +52,34 @@ app.Animation = (function () {
 	function step3() {
 		t.to("#caption-2", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#caption-3", 0, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
-		t.delayedCall(1.8, step4);
+		t.delayedCall(1.3, step4);
 	}
 
 	// --------------------------------------------------------------------------------------
 	function step4() {
 		t.to("#caption-3", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#caption-4", 0, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
-		t.delayedCall(1.3, step5);
+		t.delayedCall(1.7, step5);
 	}
 
 	// --------------------------------------------------------------------------------------
 	function step5() {
 		t.to("#caption-4", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
-		t.to("#caption-5", 1, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
+		t.to("#caption-5", 0, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
 		t.delayedCall(1.7, step6);
 	}
 
 	// --------------------------------------------------------------------------------------
-	function step6() {
-		t.to("#caption-5", 1, {y:0, delay:0.0, ease:Cubic.easeInOut});
-		t.to("#logo", 1, {scale:1, x:0, y:0, delay:0.0, ease:Cubic.easeInOut});
+    function step6() {
+        t.to("#caption-5", 0, {opacity:0, delay:0.0, ease:Cubic.easeInOut});
+        t.to("#caption-6", 1, {opacity:1, delay:0.0, ease:Cubic.easeInOut});
+        t.delayedCall(.5, step7);
+    }
+
+    // --------------------------------------------------------------------------------------
+	function step7() {
+		// t.to("#caption-6", 1, {y:0, delay:0.0, ease:Cubic.easeInOut});
+		// t.to("#logo", 1, {scale:1, x:0, y:0, delay:0.0, ease:Cubic.easeInOut});
 		t.to("#legal-button", 1, {opacity:1, delay:1.0, ease:Cubic.easeInOut});
 		t.set("#legal-button", {display:"block"});
 	}
