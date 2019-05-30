@@ -17,8 +17,8 @@ app.Animation = (function () {
 		t.set("#caption-1", {opacity:1});
 		t.set("#caption-2", {opacity:0});
 		t.set("#caption-3", {opacity:0});
-		t.set("#caption-4", {opacity:0});
-		t.set("#caption-5", {opacity:0, y:-8});
+		// t.set("#caption-4", {opacity:0});
+		// t.set("#caption-5", {opacity:0, y:-8});
 		// t.set("#logo", {scale:0.75, x:-50, y:-50});
 
 		banner.addEventListener('mouseover', handleOver, true);
